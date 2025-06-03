@@ -36,8 +36,7 @@ const addFirm = async(req, res)=>{
 
         res.status(200).json({status:200,message:"Firm Created Successfully",data:insertFirm})
     } catch (error) {
-        res.status(401)
-        throw new Error(error)
+        res.status(500).json({error})
     }    
 }
 

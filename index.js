@@ -6,6 +6,8 @@ dotEnv.config()
 
 const mongoose = require('mongoose')
 
+const cors = require('cors')
+
 const vendorRoutes = require('./routes/vendorRoutes')
 
 const firmRoutes = require('./routes/firmRoutes')
@@ -19,6 +21,8 @@ const app = express()
 const port = process.env.port || 4000
 
 app.use(express.json())
+
+app.use(cors())
 
 app.use(express.urlencoded({extended:true}))
 

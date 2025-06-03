@@ -47,8 +47,6 @@ const vendorLogin = async(req, res) =>{
 
         const jwtToken= jwt.sign({ vendorId: vendorData._id }, process.env.JWT_SECRET, { expiresIn: '1d' })
 
-        console.log(process.env.JWT_SECRET)
-
         res.status(200).json({status:200,message:"Login Successfull",token:jwtToken})
         
     } catch (error) {
