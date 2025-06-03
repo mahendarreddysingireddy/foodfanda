@@ -20,6 +20,7 @@ const addFirm = async(req, res)=>{
             throw new Error('Vendor Data Not found')
         }
 
+
         const insertFirm = await firm.create({
             firmName,
             category,
